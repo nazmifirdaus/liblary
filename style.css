@@ -1,0 +1,174 @@
+/* Mengatur dasar halaman */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Container utama yang menengahkan form dan memberi background */
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Ganti 'assets/background.jpg' dengan path gambar Anda */
+  background: url('img/IMG.jpg') no-repeat center center/cover;
+  position: relative;
+}
+
+/* Memberi lapisan gelap agar teks lebih terbaca */
+.login-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* Ini adalah kotak transparan di tengah */
+.login-box {
+  position: relative;
+  width: 420px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  /* Latar belakang semi-transparan */
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  /* Efek blur pada background di belakang kotak */
+  -webkit-backdrop-filter: blur(10px);
+  /* Untuk Safari */
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+.login-box h2 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.login-box .subtitle {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Grup untuk ikon dan input */
+.input-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.input-group i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.input-group input {
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  padding: 0 20px 0 50px;
+  /* Padding kiri untuk memberi ruang pada ikon */
+  font-size: 16px;
+  color: #fff;
+  outline: none;
+}
+
+.input-group input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.input-group input:focus {
+  border-color: #fff;
+}
+
+/* Opsi "Ingat saya" dan "Lupa Password" */
+.options {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.options label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.options input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.options a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.options a:hover {
+  text-decoration: underline;
+}
+
+/* Tombol Login */
+.login-btn {
+  width: 100%;
+  height: 50px;
+  background: #007bff;
+  /* Warna biru yang modern */
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background: #0056b3;
+}
+
+/* Link untuk registrasi */
+.register-link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.register-link a {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+/* Styling untuk pesan error */
+.error-message {
+  background: rgba(255, 82, 82, 0.2);
+  color: #ffcaca;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255, 82, 82, 0.4);
+}
